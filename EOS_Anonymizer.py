@@ -15,7 +15,7 @@ for x in listofFiles:
     print(ds["PatientName"].VR)
     anonym_element = ["PN", "DA", "TM", "LO", "SH", "LT", "UI"] # Elements corresponding to Personal info.
 
-    def person_names_callback(dataset, dataelements): # This function changes deletes the personal element info.
+    def person_names_callback(dataset, dataelements): # This function deletes the personal elements' info.
         for elem in dataset:    
             if elem.VR in dataelements:
                 elem.value = None
